@@ -35,5 +35,5 @@ jobs:
       run: dotnet pack --configuration Release --no-restore
 
     - name: Publish
-      run: dotnet nuget push "EntityTypes/bin/Release/*.nupkg" --skip-duplicate
+      run: dotnet nuget push "bin/Release/*.nupkg" --skip-duplicate
 
