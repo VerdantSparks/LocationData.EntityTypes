@@ -18,7 +18,11 @@ namespace LocationData.Cosmos
         [JsonProperty("location")]
         public Location Location
         {
-            get => new Location{Longitude = BackingLocation.Position.Longitude, Latitude = BackingLocation.Position.Latitude};
+            get =>
+                new Location
+                {
+                    Longitude = BackingLocation.Position.Longitude, Latitude = BackingLocation.Position.Latitude
+                };
             set => BackingLocation = new Point(value.Longitude, value.Latitude);
         }
     }

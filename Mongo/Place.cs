@@ -20,7 +20,8 @@ namespace LocationData.Mongo
 
         [BsonIgnore]
         [JsonProperty("location")]
-        public Location Location {
+        public Location Location
+        {
             get =>
                 new Location
                 {
