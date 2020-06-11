@@ -1,7 +1,7 @@
 namespace LocationData
 {
-    public interface IPlaceConverter<in T>
+    public interface IPlaceConverter<in T1, TVendorSpecificLocationStorage>
     {
-        IPlaceDetail Convert(T input);
+        IPlace<IPlaceDetail, TVendorSpecificLocationStorage> Convert(T1 input);
     }
 }
