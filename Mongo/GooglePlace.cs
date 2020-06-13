@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace LocationData.Mongo
 {
-    public class GooglePlace<T> : Place<T> where T : IPlaceDetail, IGooglePlace
+    public abstract class GooglePlace<T> : Place<T>, IGooglePlace where T : IPlaceDetail
     {
         [JsonProperty("place_id")]
         public string PlaceId { get; set; }
